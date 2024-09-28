@@ -151,13 +151,6 @@
   </url>
   
   <url>
-    <loc>https://oneton.cf/tags/%E7%AE%97%E6%B3%95/</loc>
-    <lastmod>2024-09-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://oneton.cf/tags/Hexo/</loc>
     <lastmod>2024-09-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -166,6 +159,13 @@
   
   <url>
     <loc>https://oneton.cf/tags/%E6%95%B0%E5%AD%A6/</loc>
+    <lastmod>2024-09-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://oneton.cf/tags/%E7%AE%97%E6%B3%95/</loc>
     <lastmod>2024-09-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -181,13 +181,6 @@
   </url>
   
   <url>
-    <loc>https://oneton.cf/categories/%E7%AE%97%E6%B3%95/</loc>
-    <lastmod>2024-09-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://oneton.cf/categories/Hexo/</loc>
     <lastmod>2024-09-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -196,6 +189,13 @@
   
   <url>
     <loc>https://oneton.cf/categories/%E6%96%87%E5%8C%96%E8%AF%BE/</loc>
+    <lastmod>2024-09-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://oneton.cf/categories/%E7%AE%97%E6%B3%95/</loc>
     <lastmod>2024-09-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

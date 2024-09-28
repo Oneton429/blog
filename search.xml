@@ -3,11 +3,11 @@
   <entry>
     <title>算法设计与分析 作业4</title>
     <url>/%E7%AE%97%E6%B3%95%E4%BD%9C%E4%B8%9A4/</url>
-    <content><![CDATA[<p>第四周作业</p><a id="more"></a><h3 id="1-计算普通FFT算法的数据写入复杂度"><a href="#1-计算普通FFT算法的数据写入复杂度" class="headerlink" title="1. 计算普通FFT算法的数据写入复杂度"></a>1. 计算普通FFT算法的数据写入复杂度</h3><p>设缓存大小为$M$，块大小为$B$，FFT的采样次数为$N$：</p><p>内存写次数为</p><script type="math/tex;mode=display">\begin{align}
+    <content><![CDATA[<p>第四周作业</p><a id="more"></a><h3 id="1-计算普通FFT算法的数据写入复杂度"><a href="#1-计算普通FFT算法的数据写入复杂度" class="headerlink" title="1. 计算普通FFT算法的数据写入复杂度"></a>1. 计算普通FFT算法的数据写入复杂度</h3><p>设缓存大小为$M$，块大小为$B$，FFT的采样次数为$N$：</p><p>内存写次数为</p><script type="math/tex;mode=display">\begin{align*}
 &1\cdot\dfrac{N}{B} + 2\cdot\dfrac{\frac{N}{2}}{B} + 4\cdot\dfrac{\frac{N}{4}}{B} +\cdots + 2^{\log{\frac{N}{B}}}\cdot\dfrac{\frac{N}{2^{\log{\frac{N}{B}}}}}{B}\\
 =&\frac{N}{B}\log{\frac{N}{B}}\\
 =&O(N\log{N})
-\end{align}</script><h3 id="2-已知向量-w-，-q-v-w-F-1-F-v-times-F-w-，求向量-v"><a href="#2-已知向量-w-，-q-v-w-F-1-F-v-times-F-w-，求向量-v" class="headerlink" title="2. 已知向量$w$，$q=v*w=F^{-1}(F(v)\times F(w))$，求向量$v$"></a>2. 已知向量$w$，$q=v*w=F^{-1}(F(v)\times F(w))$，求向量$v$</h3><p>将$w$和$q$进行傅里叶变换得到$F(w)$和$F(q)$。根据卷积定理，卷积在时域中等于频域中的乘法，即$F(q)=F(w)\times F(v)$，可得$F(v)=\dfrac{F(q)}{F(w)}$，对$F(v)$进行傅里叶逆变换即得向量$v$。</p>]]></content>
+\end{align*}</script><h3 id="2-已知向量-w-，-q-v-w-F-1-F-v-times-F-w-，求向量-v"><a href="#2-已知向量-w-，-q-v-w-F-1-F-v-times-F-w-，求向量-v" class="headerlink" title="2. 已知向量$w$，$q=v*w=F^{-1}(F(v)\times F(w))$，求向量$v$"></a>2. 已知向量$w$，$q=v*w=F^{-1}(F(v)\times F(w))$，求向量$v$</h3><p>将$w$和$q$进行傅里叶变换得到$F(w)$和$F(q)$。根据卷积定理，卷积在时域中等于频域中的乘法，即$F(q)=F(w)\times F(v)$，可得$F(v)=\dfrac{F(q)}{F(w)}$，对$F(v)$进行傅里叶逆变换即得向量$v$。</p>]]></content>
       <categories>
         <category>算法</category>
       </categories>
