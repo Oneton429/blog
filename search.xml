@@ -15,7 +15,7 @@
 \|U(x' - x^*)\|^2_2 &= \|Ux' - b\|^2_2 - \|Ux^* - b\|^2_2\\
 & \leq (1 + \epsilon)\|Ux^* - b\|_2^2 - \|Ux^* - b\|_2^2\\
 & = \epsilon\|Ux^* - b\|_2^2\\
-\end{align*}</script><p>所以$|U(x’ - x^<em>)|^2_2= O(\epsilon)|Ux^</em> - b|_2^2$</p>]]></content>
+\end{align*}</script><p>所以$|U(x’ - x^<em>)|^2_2= O(\epsilon)|Ux^</em> - b|_2^2$</p><p><a href="/media/algo10_sol.pdf">Solution</a></p>]]></content>
       <categories>
         <category>算法</category>
       </categories>
@@ -28,7 +28,7 @@
   <entry>
     <title>算法设计与分析 作业9</title>
     <url>/%E7%AE%97%E6%B3%95%E4%BD%9C%E4%B8%9A9/</url>
-    <content><![CDATA[<p>第九周作业</p><a id="more"></a><h3 id="1-证明The-Matrix-Method是Universal-Hashing"><a href="#1-证明The-Matrix-Method是Universal-Hashing" class="headerlink" title="1. 证明The Matrix Method是Universal Hashing"></a>1. 证明The Matrix Method是Universal Hashing</h3><p>满足Universal Hashing，即$\text{Pr}[h(\vec{x})=h(\vec{y}) | \vec{x}\neq \vec{y}] \leq \frac{1}{M}$，即令$\vec{z}=\vec{x}-\vec{y}\neq\vec0, \text{Pr}[A\vec{z}=\vec0]\leq\frac{1}{M}$</p><p>矩阵$A$每一位$a_{ij}$的选择都是随机独立的，矩阵乘法求和相当于从$\vec{z}$中随机选几项相加，相当于随机序列求和，和为奇数或偶数的概率均为$\frac12$，也就是$h(\vec{x})$每一位为$0$或$1$的概率均为$\frac{1}{2}$</p><p>那么$\text{Pr}[h(\vec{x})=\vec0]=\left(\frac{1}{2}\right)^m=\frac{1}{M}\leq\frac{1}{M}$</p><p>得证</p><h3 id="2-证明The-Dot-product-Method是Universal-Hashing"><a href="#2-证明The-Dot-product-Method是Universal-Hashing" class="headerlink" title="2. 证明The Dot-product Method是Universal Hashing"></a>2. 证明The Dot-product Method是Universal Hashing</h3><p>同理，需要满足$\text{Pr}[\langle\vec{z}, \vec{r}\rangle \mod M=0]\leq\frac{1}{M}$</p><p>由于$\vec{r}$的$k$项随机独立选取，可以认为在模$M$下，$\langle\vec{z}, \vec{r}\rangle$在$\left\{0,1,2,\cdots,M-1\right\}$上均匀分布</p><p>那么$\text{Pr}[\langle\vec{z}, \vec{r}\rangle \mod M=0]=\frac{1}{M}\leq\frac{1}{M}$</p><p>得证</p><h3 id="3-2-wise-Universal-Hashing"><a href="#3-2-wise-Universal-Hashing" class="headerlink" title="3. 2-wise Universal Hashing"></a>3. 2-wise Universal Hashing</h3><h5 id="a"><a href="#a" class="headerlink" title="a. "></a>a.<a id="a"></a></h5><p>由于$\vec{b}$固定，所以并不会影响$h(\vec{x})$的分布方式，取到某一特定值的概率仍然是$\left(\frac{1}{2}\right)^m=\frac{1}{M}$，而且独立。所以$\text{Pr}[h(\vec{x_1})=\alpha_1\land h(\vec{x_2})=\alpha_2]=\frac{1}{M^2}$，得证。</p><h5 id="b"><a href="#b" class="headerlink" title="b."></a>b.</h5><p>依然可以认为$A\vec{x}$第$i$列的值为从$\vec{z}$的$z_0$到$z_{n-i-1}$序列中随机选取求和，仍然满足是$h(\vec{x})$每一位为$0$或$1$的概率均为$\frac{1}{2}$。</p><p>那么和<a href="#a" style="text-decoration:none;font-weight:700;color:inherit">a.</a>中一样，取到某一特定值的概率仍然是$\left(\frac{1}{2}\right)^m=\frac{1}{M}$，而且独立，$\text{Pr}[h(\vec{x_1})=\alpha_1\land h(\vec{x_2})=\alpha_2]=\frac{1}{M^2}$，得证。</p>]]></content>
+    <content><![CDATA[<p>第九周作业</p><a id="more"></a><h3 id="1-证明The-Matrix-Method是Universal-Hashing"><a href="#1-证明The-Matrix-Method是Universal-Hashing" class="headerlink" title="1. 证明The Matrix Method是Universal Hashing"></a>1. 证明The Matrix Method是Universal Hashing</h3><p>满足Universal Hashing，即$\text{Pr}[h(\vec{x})=h(\vec{y}) | \vec{x}\neq \vec{y}] \leq \frac{1}{M}$，即令$\vec{z}=\vec{x}-\vec{y}\neq\vec0, \text{Pr}[A\vec{z}=\vec0]\leq\frac{1}{M}$</p><p>矩阵$A$每一位$a_{ij}$的选择都是随机独立的，矩阵乘法求和相当于从$\vec{z}$中随机选几项相加，相当于随机序列求和，和为奇数或偶数的概率均为$\frac12$，也就是$h(\vec{x})$每一位为$0$或$1$的概率均为$\frac{1}{2}$</p><p>那么$\text{Pr}[h(\vec{x})=\vec0]=\left(\frac{1}{2}\right)^m=\frac{1}{M}\leq\frac{1}{M}$</p><p>得证</p><h3 id="2-证明The-Dot-product-Method是Universal-Hashing"><a href="#2-证明The-Dot-product-Method是Universal-Hashing" class="headerlink" title="2. 证明The Dot-product Method是Universal Hashing"></a>2. 证明The Dot-product Method是Universal Hashing</h3><p>同理，需要满足$\text{Pr}[\langle\vec{z}, \vec{r}\rangle \mod M=0]\leq\frac{1}{M}$</p><p>由于$\vec{r}$的$k$项随机独立选取，可以认为在模$M$下，$\langle\vec{z}, \vec{r}\rangle$在$\left\{0,1,2,\cdots,M-1\right\}$上均匀分布</p><p>那么$\text{Pr}[\langle\vec{z}, \vec{r}\rangle \mod M=0]=\frac{1}{M}\leq\frac{1}{M}$</p><p>得证</p><h3 id="3-2-wise-Universal-Hashing"><a href="#3-2-wise-Universal-Hashing" class="headerlink" title="3. 2-wise Universal Hashing"></a>3. 2-wise Universal Hashing</h3><h5 id="a"><a href="#a" class="headerlink" title="a. "></a>a.<a id="a"></a></h5><p>由于$\vec{b}$固定，所以并不会影响$h(\vec{x})$的分布方式，取到某一特定值的概率仍然是$\left(\frac{1}{2}\right)^m=\frac{1}{M}$，而且独立。所以$\text{Pr}[h(\vec{x_1})=\alpha_1\land h(\vec{x_2})=\alpha_2]=\frac{1}{M^2}$，得证。</p><h5 id="b"><a href="#b" class="headerlink" title="b."></a>b.</h5><p>依然可以认为$A\vec{x}$第$i$列的值为从$\vec{z}$的$z_0$到$z_{n-i-1}$序列中随机选取求和，仍然满足是$h(\vec{x})$每一位为$0$或$1$的概率均为$\frac{1}{2}$。</p><p>那么和<a href="#a" style="text-decoration:none;font-weight:700;color:inherit">a.</a>中一样，取到某一特定值的概率仍然是$\left(\frac{1}{2}\right)^m=\frac{1}{M}$，而且独立，$\text{Pr}[h(\vec{x_1})=\alpha_1\land h(\vec{x_2})=\alpha_2]=\frac{1}{M^2}$，得证。</p><p><a href="/media/algo9_sol.pdf">Solution</a></p>]]></content>
       <categories>
         <category>算法</category>
       </categories>
@@ -120,9 +120,9 @@ C_n^k\cdot D_{n-k}&=\frac{n!}{k!(n-k)!}(n-k)!\sum\limits_{i=0}^{n-k}{\frac{\left
       </categories>
       <tags>
         <tag>算法</tag>
+        <tag>最短路</tag>
         <tag>图论</tag>
         <tag>经典算法</tag>
-        <tag>最短路</tag>
       </tags>
   </entry>
   <entry>
@@ -134,9 +134,9 @@ C_n^k\cdot D_{n-k}&=\frac{n!}{k!(n-k)!}(n-k)!\sum\limits_{i=0}^{n-k}{\frac{\left
       </categories>
       <tags>
         <tag>算法</tag>
-        <tag>最小生成树</tag>
         <tag>图论</tag>
         <tag>经典算法</tag>
+        <tag>最小生成树</tag>
       </tags>
   </entry>
   <entry>
