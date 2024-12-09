@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>算法设计与分析 作业13</title>
+    <url>/%E7%AE%97%E6%B3%95%E4%BD%9C%E4%B8%9A13/</url>
+    <content><![CDATA[<p>第十三周作业</p><a id="more"></a><h3 id="1-构造一个线性规划问题，使得原始问题和对偶问题都没有可行解。分别写出原始问题和对偶问题。"><a href="#1-构造一个线性规划问题，使得原始问题和对偶问题都没有可行解。分别写出原始问题和对偶问题。" class="headerlink" title="1. 构造一个线性规划问题，使得原始问题和对偶问题都没有可行解。分别写出原始问题和对偶问题。"></a>1. 构造一个线性规划问题，使得原始问题和对偶问题都没有可行解。分别写出原始问题和对偶问题。</h3><p>原始问题$\min{z = x_1+x_2}$，约束条件$\begin{cases}x_1+x_2\leq -1\-x_1-x_2\leq -1\\x_1, x_2\geq0\end{cases}$，显然没有可行解</p><p>对偶问题$\max{w=-y_1-y_2}$，约束条件$\begin{cases} y_1-y_2\geq1 \\ y_1-y_2\geq1 \\ y_1, y_2\geq0 \end{cases}$，可行域无界</p><h3 id="2-使用线性规划对如下问题建模"><a href="#2-使用线性规划对如下问题建模" class="headerlink" title="2. 使用线性规划对如下问题建模"></a>2. 使用线性规划对如下问题建模</h3><h5 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h5><p>$\max{w=6x_1+8x_2}$，约束条件$\begin{cases}4x_1+4x_2\leq 40\\5x_1+10x_2\leq 60\\x_1, x_2\geq0\end{cases}$</p><h5 id="2"><a href="#2" class="headerlink" title="2."></a>2.</h5><p>设$x_{i,j}$表示护士$i$是否在第$j$天值班。则目标为$\min{z=\sum\limits_{i=1}^m{\sum\limits_{j=1}^7{x_{i,j}}}}$；</p><p>约束条件为$\begin{cases} \sum\limits_{i=1}^m{x_{i,j}} \geq d_j \\ \sum\limits_{j=0}^7{x_{i,j}} \leq 5 \\ \sum\limits_{k=0}^4{x_{i,(j+k-1)\text{ mod }7+1}} \geq 3 \\ \exist j:x_{i,j} + x_{i,j\text{ mod }7 + 1}\leq0\end{cases}$</p><h5 id="3"><a href="#3" class="headerlink" title="3."></a>3.</h5><p>设$t_i$为航班$i$降落的时间，那么目标为$\max{\min{t_i-t_{i-1}}}$</p><p>约束条件为$\begin{cases}t_i&lt;t_{i+1}, i=1,2,\dots,n-1\\ t_i \geq a_i, i=1,2,\dots,n\\ t_i \leq b_i, i=1,2,\dots,n\end{cases}$</p><h3 id="3-下列约束是否是线性约束？如果不是线性约束，能否将其等价转换成线性约束？如果能转化，请展示；如果不能，说明原因。"><a href="#3-下列约束是否是线性约束？如果不是线性约束，能否将其等价转换成线性约束？如果能转化，请展示；如果不能，说明原因。" class="headerlink" title="3. 下列约束是否是线性约束？如果不是线性约束，能否将其等价转换成线性约束？如果能转化，请展示；如果不能，说明原因。"></a>3. 下列约束是否是线性约束？如果不是线性约束，能否将其等价转换成线性约束？如果能转化，请展示；如果不能，说明原因。</h3><h5 id="1-3x-1-5x-2-22-geq18"><a href="#1-3x-1-5x-2-22-geq18" class="headerlink" title="1. $-3x_1-5x_2+22\geq18$"></a>1. $-3x_1-5x_2+22\geq18$</h5><p>是线性约束</p><h5 id="2-2x-1-2-8-leq0"><a href="#2-2x-1-2-8-leq0" class="headerlink" title="2. $2x_1^2-8\leq0$"></a>2. $2x_1^2-8\leq0$</h5><p>不是，但可以转化成$\begin{cases}x_1\leq2\\x_1\geq-2\end{cases}$</p><h5 id="3-x-1x-2-3x-1-x-2-3-0"><a href="#3-x-1x-2-3x-1-x-2-3-0" class="headerlink" title="3. $x_1x_2-3x_1-x_2+3=0$"></a>3. $x_1x_2-3x_1-x_2+3=0$</h5><p>不是，但可以转化，$\Rightarrow (x_1-1)(x_2-3)=0 \Rightarrow \begin{cases}x_1=1\\x_2=3\end{cases}$</p><h5 id="4-frac-3x-1-2x-2-2x-1-1-4"><a href="#4-frac-3x-1-2x-2-2x-1-1-4" class="headerlink" title="4. $\frac{3x_1-2x_2}{2x_1+1}=4$"></a>4. $\frac{3x_1-2x_2}{2x_1+1}=4$</h5><p>不是，但可以转化$\Rightarrow 5x_1+2x_2+4=0$</p><h5 id="5-e-3x-1-5x-2-geq12"><a href="#5-e-3x-1-5x-2-geq12" class="headerlink" title="5. $e^{3x_1+5x_2}\geq12$"></a>5. $e^{3x_1+5x_2}\geq12$</h5><p>不是，但可以转化$\Rightarrow 3x_1+5x_2\geq \ln{12}$</p><h5 id="6-x-lt-3"><a href="#6-x-lt-3" class="headerlink" title="6. $|x|&lt;3$"></a>6. $|x|&lt;3$</h5><p>不是，但可以转化成$\begin{cases}x_1 <3\\x_1>-3\end{cases}$</p><h5 id="7-max-left-x-1-x-1-7x-2-x-2-3-right-leq-8"><a href="#7-max-left-x-1-x-1-7x-2-x-2-3-right-leq-8" class="headerlink" title="7. $\max{\left\{ x_1, -x_1+7x_2, x_2^3 \right\}} \leq 8$"></a>7. $\max{\left\{ x_1, -x_1+7x_2, x_2^3 \right\}} \leq 8$</h5><p>不是，可以转化成$\begin{cases}x_1\leq8\\ -x_1+7x_2\leq 8\\ x_2 \leq 2\end{cases}$</p><h5 id="8-min-2x-1-3x-2-geq-max-10-x-1-6-x-2"><a href="#8-min-2x-1-3x-2-geq-max-10-x-1-6-x-2" class="headerlink" title="8. $\min{\{2x_1, 3x_2\}}\geq\max{\{10-x_1, 6-x_2\}}$"></a>8. $\min{\{2x_1, 3x_2\}}\geq\max{\{10-x_1, 6-x_2\}}$</h5><p>不是，但是可以转化为$\begin{cases} x_1 \geq \frac{10}{3}\\ 2x_1+x_2\geq6\\ x_1+3x_2\geq10\\ x_2\geq\frac{3}{2}\end{cases}$</p><h3 id="4-转化为线性规划问题"><a href="#4-转化为线性规划问题" class="headerlink" title="4. 转化为线性规划问题"></a>4. 转化为线性规划问题</h3><h5 id="1-最小化最大化问题-min-limits-x-max-limits-i-1-ldots-n-c-i-T-x-d-i"><a href="#1-最小化最大化问题-min-limits-x-max-limits-i-1-ldots-n-c-i-T-x-d-i" class="headerlink" title="1. 最小化最大化问题 $\min\limits_{x} \max\limits_{i=1,\ldots,n} \{c_i^T x + d_i\}$"></a>1. 最小化最大化问题 $\min\limits_{x} \max\limits_{i=1,\ldots,n} \{c_i^T x + d_i\}$</h5><p>转化成</p><script type="math/tex;mode=display">\min_{x, z} z \\
+ \text{s.t. } c_i^T x + d_i \leq z \quad \forall i = 1, \ldots, n \\
+ \text{s.t. } Ax = b \\
+ \text{s.t. } x \geq 0 \\
+ z \in \mathbb{R}</script><h5 id="2-绝对值问题-min-sum-limits-i-1-n-left-x-i-right"><a href="#2-绝对值问题-min-sum-limits-i-1-n-left-x-i-right" class="headerlink" title="2. 绝对值问题 $\min{\sum\limits_{i=1}^n{\left|x_i\right|}}$"></a>2. 绝对值问题 $\min{\sum\limits_{i=1}^n{\left|x_i\right|}}$</h5><h6 id="1-转化为线性规划问题"><a href="#1-转化为线性规划问题" class="headerlink" title="(1). 转化为线性规划问题"></a>(1). 转化为线性规划问题</h6><p>对于每个$x_i$，引入两个<strong>非负</strong>变量$y_i^+=\max{\{0,x_i\}}, y_i^-=\max{\{0,-x_i\}}$，那么$x_i=y_i^+-y_i^-, |x|=y_i^++y_i^-$</p><p>转化成</p><script type="math/tex;mode=display">\min{\sum\limits_{i=1}^n{\left(y_i^++y_i^-\right)}}\\
+\text{s.t. } Ax = b \\
+\text{s.t. } x_i=y_i^+-y_i^-\quad\forall i=1,2,\cdots,n\\
+\text{s.t. } y_i^+,y_i^-\geq0\quad\forall i=1,2,\cdots,n\\</script><h6 id="2-max能不能转化？"><a href="#2-max能不能转化？" class="headerlink" title="(2). max能不能转化？"></a>(2). max能不能转化？</h6><p>不能。最大化绝对值和的问题是一个非凸优化问题。线性规划只能处理凸优化问题，因此直接使用线性规划求解器可能会得到局部最优解而不是全局最优解。</p><h5 id="3-线性分式规划"><a href="#3-线性分式规划" class="headerlink" title="3. 线性分式规划"></a>3. 线性分式规划</h5><p>令$t=\frac{c^T x + d}{e^T x + f}$，也就是要满足$( c^T x + d) \geq t (e^T x + f)$</p><p>转化成</p><script type="math/tex;mode=display">\min_{x, t} t \\
+\text{s.t. } c^T x + d \geq t (e^T x + f) \\
+\text{s.t. } Ax \leq b \\
+\text{s.t. } e^T x + f > 0</script><h3 id="5-写出线性规划的对偶形式"><a href="#5-写出线性规划的对偶形式" class="headerlink" title="5. 写出线性规划的对偶形式"></a>5. 写出线性规划的对偶形式</h3><h5 id="1-1"><a href="#1-1" class="headerlink" title="1."></a>1.</h5><script type="math/tex;mode=display">\min{5y_1+12y_2+8y_3}\\
+\text{s.t. }1y_1+4y_3\leq5\\
+y_1+3y_2-y_3\leq6\\
+-4y_2\geq-1\\
+-3y_1+2y_2+5y_3=2\\
+y_1\leq0, y_2\geq0, y_3\text{ free}</script><h5 id="2-1"><a href="#2-1" class="headerlink" title="2."></a>2.</h5><p>看不大懂 问AI的</p><p>将原问题视为一个零和博弈问题，借助于零和博弈中的鞍点理论来得到对偶问题。</p><p>考虑原问题的拉格朗日函数$L(t, \vec{p}, \lambda, \mu) = t + \lambda^T (t \cdot \vec{1} - M^T \vec{p}) + \mu (\vec{1}^T \vec{p} - 1)$，其中，$\lambda$和$\mu$是拉格朗日乘子。根据鞍点理论，我们需要找到使得拉格朗日函数在所有可能的$t$和$\vec{p}$上达到最大值，在所有可能的$\lambda$和$\mu$上达到最小值的点。</p><p>首先，对$t$和$\vec{p}$求偏导数并令其为零：</p><script type="math/tex;mode=display">\frac{\partial L}{\partial t} = 1 + \lambda^T \vec{1} = 0 \implies \lambda^T \vec{1} = -1\\
+\frac{\partial L}{\partial \vec{p}} = -M^T \lambda + \mu \vec{1} = 0 \implies M^T \lambda = \mu \vec{1}</script><p>其次，对$\lambda$和$\mu$求偏导数并令其为零：</p><script type="math/tex;mode=display">\frac{\partial L}{\partial \lambda} = t \cdot \vec{1} - M^T \vec{p} \leq \vec{0}\\
+\frac{\partial L}{\partial \mu} = \vec{1}^T \vec{p} - 1 = 0 \implies \vec{1}^T \vec{p} = 1</script><p>这样，对偶问题为</p><script type="math/tex;mode=display">& \min_{\lambda, \mu} \mu \\
+& \text{s.t. } M^T \lambda = \mu \vec{1} \\
+& \text{s.t. } \lambda^T \vec{1} = -1 \\
+& \text{s.t. } \lambda \geq \vec{0}</script>]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>算法</tag>
+        <tag>现代算法</tag>
+        <tag>线性规划</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>算法设计与分析 作业11</title>
     <url>/%E7%AE%97%E6%B3%95%E4%BD%9C%E4%B8%9A11/</url>
     <content><![CDATA[<p>第十一周作业</p><a id="more"></a><h3 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h3><h5 id="a"><a href="#a" class="headerlink" title="a.  "></a>a. <a id="1a"></a></h5><p>令$Z=\langle x,y \rangle = \sum\limits_{i=1}^{d}{x_i y_i}$，则$E\left[ Z \right] = E\left[ \sum\limits_{i=1}^{d}{x_i y_i} \right] = \sum\limits_{i=1}^{d}{E\left[x_i y_i\right]}$</p><p>由于$x, y$独立且均匀取值，所以$E\left[ Z \right]=0$</p><p>根据霍夫丁不等式，有$\text{Pr}\left[ Z-E\left[Z\right] \geq \varepsilon d \right] = \text{Pr}\left[ \langle x,y \rangle \geq \varepsilon d \right] \leq 2\exp\left(-\dfrac{2 \varepsilon^2 d^2}{4d}\right) = 2\exp\left(-\dfrac{\varepsilon^2 d}{2}\right)&lt;2\exp\left(-\dfrac{\varepsilon^2 d}{6}\right)$</p><p>得证</p><h5 id="b"><a href="#b" class="headerlink" title="b."></a>b.</h5><p>由<a href="#1a" style="text-decoration:none;color:#000;font-weight:700">a</a>得：$\text{Pr}\left[ \langle x,y \rangle \geq \varepsilon \right] \leq 2\exp{\left( -\varepsilon^2d/6 \right)}$。</p><p>那么$\binom{N}{2}$对的内积都小于$\varepsilon$的概率为</p><script type="math/tex;mode=display">1-\binom{N}{2} \cdot \text{Pr}\left[ \langle x,y \rangle \geq \varepsilon \right] \geq 1-\frac{\exp{\left(2c\varepsilon^2 d\right)}}{2}\cdot 2\exp{\left(-\varepsilon^2d/6\right)}=1-\exp{\left( \left( 2c-\frac 16 \right) d\varepsilon^2 \right)} \geq \frac12</script><p>当$c\leq\frac1{12}-\frac{\ln2}{2\varepsilon^2d}$时即可，且$\frac1{12}-\frac{\ln2}{2\varepsilon^2d}$关于$d&gt;0$单调递增且有大于$0$的时候，此时$d_0$取比零点大的值就行。</p><h3 id="2"><a href="#2" class="headerlink" title="2."></a>2.</h3><p>要证明$S^TS$大概率是近似单位阵，需要它的对角线元素近似为$1$且非对角线元素近似为$0$。</p><p>对角线元素$\left(S^TS\right)_{ii}=\sum\limits_{k=1}^{K}{S_{ki}^2}$，由于$S_{ki}$从$\left\{ -\frac{1}{\sqrt{K}}, \frac{1}{\sqrt{K}} \right\}$中均匀抽取，所以$S_{ki}^2=\frac{1}{K}$，即$\left(S^TS\right)_{ii}=1$。</p><p>非对角线元素$(S^T S)_{ij} = \sum\limits_{k=1}^{K}{S_{ki} S_{kj}}$，同样，每个$S_{ki}$和$S_{kj}$的取值都是$-\frac{1}{\sqrt{K}}$或$\frac{1}{\sqrt{K}}$、概率都是$\frac 12$</p><p>因此，$E\left[ S_{ki} S_{kj} \right]=\left( \frac{1}{\sqrt{K}} \cdot \frac{1}{\sqrt{K}} + \frac{1}{\sqrt{K}} \cdot -\frac{1}{\sqrt{K}} + -\frac{1}{\sqrt{K}} \cdot \frac{1}{\sqrt{K}} + -\frac{1}{\sqrt{K}} \cdot -\frac{1}{\sqrt{K}} \right) \cdot \frac{1}{4} = 0$</p><p>且根据霍夫丁不等式，$(S^T S)_{ij}$的值不在$\varepsilon \sqrt{K}$范围内的概率</p><script type="math/tex;mode=display">\text{Pr}\left[ \left| \sum\limits_{k=1}^{K}{S_{ki} S_{kj}} \right| \geq \varepsilon\sqrt{K} \right] \leq 2\exp{\left( -\frac{2\varepsilon^2K}{4/K} \right)}=2\exp{\left( -\frac{\varepsilon^2K^2}{2} \right)}</script><p>当$K$足够大时，$K^2\geq \frac{2\log{\left(2/\delta\right)}}{\varepsilon^2}$时，概率$\leq \delta$，大概率为近似单位阵。</p><h3 id="3"><a href="#3" class="headerlink" title="3."></a>3.</h3><h5 id="a-1"><a href="#a-1" class="headerlink" title="a."></a>a.</h5><p>定义$Y_t=2^{X_t}-1$，则$N=Y_n$，$2^{-X_t}=\frac{1}{Y_t+1}$</p><p>$E[Y_{t+1}|Y_t]=E[2^{X_{t+1}}-1|2^{X_t}-1=Y_t]$，由于$X_{t+1}$以$2^{-X_t}$概率增加$1$，所以</p><p>$E[Y_{t+1}|Y_t]=(2^{X_{t}+1}-1)\cdot2^{-X_t} + (2^{X_{t}}-1)\cdot(1-2^{-X_t})$</p><p>其中，$(2^{X_{t}+1}-1)\cdot2^{-X_t}=\frac{2Y_t+1}{Y_t+1}=2-\frac{1}{Y_t+1}$，$(2^{X_{t}}-1)\cdot(1-2^{-X_t})=Y_t (1-\frac{1}{Y_t+1})=Y_t-\frac{Y_t}{Y_t+1}$</p><p>所以，$E[Y_{t+1}|Y_t]=1+Y_t$</p><p>由于$Y_0=0$，所以$E[N]=E[Y_n]=n$</p><p>同理，$E[Y_{t+1}^2|Y_t]=Y_t^2+4Y_t+1$，即$E[Y_{t+1}^2]=E[Y_t^2]+4E[Y_t]+1=E[Y_t^2]+4t+1$</p><p>计算得$E[n]=E[Y_n]=E[Y_0^2]+4\sum\limits_{t=0}^{n-1}{t}+n=2n^2-n$</p><p>因此$D[N]=E[N^2]-\left(E\left[N\right]\right)^2=n^2-n$ ？</p><h5 id="b-1"><a href="#b-1" class="headerlink" title="b."></a>b.</h5><p>$E[\hat{N}]=n$，$D[\hat{N}]=\frac1{k^2}\sum\limits_{i=1}^{k}{D[N_i]}=\frac{n(n-1)}{2k}$</p><p>需要计算$\text{Pr}\left[ \left|\hat{N}-E[\hat{N}] \right| &gt; \varepsilon n\right]$，根据切比雪夫不等式，$\text{Pr}\left[ \left| \hat{N}-E[\hat{N}] \right| &gt; \varepsilon n \right] \leq \frac{D[\hat{N}]}{\varepsilon^2 n^2}=\frac{n-1}{2k\varepsilon^2 n}$</p><p>当$n$较大时，$\dfrac{n}{n-1}\rightarrow 1$，因此$\text{Pr}\left[ \left| \hat{N}-E[\hat{N}] \right| &gt; \varepsilon n \right] \leq \frac{1}{2\varepsilon^2 k}$</p><p>得证</p>]]></content>
@@ -133,9 +166,9 @@ C_n^k\cdot D_{n-k}&=\frac{n!}{k!(n-k)!}(n-k)!\sum\limits_{i=0}^{n-k}{\frac{\left
       </categories>
       <tags>
         <tag>算法</tag>
-        <tag>最短路</tag>
         <tag>图论</tag>
         <tag>经典算法</tag>
+        <tag>最短路</tag>
       </tags>
   </entry>
   <entry>
@@ -147,9 +180,9 @@ C_n^k\cdot D_{n-k}&=\frac{n!}{k!(n-k)!}(n-k)!\sum\limits_{i=0}^{n-k}{\frac{\left
       </categories>
       <tags>
         <tag>算法</tag>
+        <tag>最小生成树</tag>
         <tag>图论</tag>
         <tag>经典算法</tag>
-        <tag>最小生成树</tag>
       </tags>
   </entry>
   <entry>
